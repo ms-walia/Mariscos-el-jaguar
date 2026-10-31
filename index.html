@@ -1520,12 +1520,15 @@ html.is-phone #opening .op-eyebrow { margin-top: 22px; }
 @media (prefers-reduced-motion: reduce) { #nav .nav__logo { animation: none; } }
 #nav .nav__sheet-brand { display: flex; align-items: center; gap: 12px; }
 #nav .nav__sheet-brand .nav__logo { width: 48px; height: 48px; animation: none; }
-html.is-phone #nav .nav__name { display: none; }
+html.is-phone #nav .nav__name { gap: 4px; font-size: 24px; line-height: 1; }
+html.is-phone #nav .nav__name small { display: none; }
+html.is-phone #nav .nav__brand { gap: 10px; }
 html.is-phone #nav .nav__logo { width: 46px; height: 46px; }
 #footer .ft-logo { display: block; width: 116px; height: 116px; margin-bottom: 16px; border-radius: 50%; box-shadow: 4px 6px 0 var(--color-3); }
-html.is-phone #nav .nav__status { font-size: 0; gap: 6px; margin-left: 8px; }
-html.is-phone #nav .nav__status::after { content: "Open"; font-size: 10px; }
-html.is-phone #nav .nav__status.is-closed::after { content: "Closed"; }
+html.is-phone #nav .nav__status { display: none; }
+#nav .nav__status-m { display: none; }
+html.is-phone #nav .nav__status-m { display: inline-flex; justify-self: start; gap: 5px; padding: 3px 8px; font-size: 9.5px; letter-spacing: .05em; }
+html.is-phone #nav .nav__status-m .bhk-status__dot { width: 6px; height: 6px; }
 #footer .ft-brand { white-space: nowrap; }
 </style>
 
@@ -1540,7 +1543,7 @@ html.is-phone #nav .nav__status.is-closed::after { content: "Closed"; }
       <li><a class="m-link-2" href="#room">The truck</a></li>
       <li><a class="m-link-2" href="#visit">Find us</a></li>
     </ul>
-    <a class="nav__brand" href="#opening" aria-label="Mariscos el Jaguar, back to the top"><img class="nav__logo" src="images/logo.png" alt="" width="56" height="56"><span class="nav__name">El Jaguar<small>Mariscos · Round Rock</small></span></a>
+    <a class="nav__brand" href="#opening" aria-label="Mariscos el Jaguar, back to the top"><img class="nav__logo" src="images/logo.png" alt="" width="56" height="56"><span class="nav__name">El Jaguar<small>Mariscos · Round Rock</small><span class="bhk-status nav__status-m" data-bhk-status>Open</span></span></a>
     <span class="bhk-status nav__status" data-bhk-status>Open</span>
     <div class="nav__tools">
       <span class="bhk-status nav__live" data-bhk-status>Open</span>
